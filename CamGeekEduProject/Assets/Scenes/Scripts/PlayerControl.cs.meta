@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f5e3fc049ea6a640bc20ef2e24ebc44
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerRigidBody: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  - JumpParticles: {fileID: 8841264241473200999, guid: b542d36da38700b48a81e2da41c84892,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
