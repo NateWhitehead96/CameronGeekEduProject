@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2603365592838657144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
@@ -57,6 +57,7 @@ MonoBehaviour:
     m_Bits: 512
   groundCheckRadius: 0.001
   JumpParticles: {fileID: 8841264241473200999, guid: b542d36da38700b48a81e2da41c84892, type: 3}
+  Score: 0
 --- !u!212 &2603365592838657151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,8 +95,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1724607555
-  m_SortingLayer: 0
+  m_SortingLayerID: 1872169013
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4b28032a0c81c804a881a24efa67405f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -166,6 +167,7 @@ MonoBehaviour:
     m_Bits: 512
   groundCheckRadius: 1
   JumpParticles: {fileID: 8841264241473200999, guid: b542d36da38700b48a81e2da41c84892, type: 3}
+  Score: 0
 --- !u!1 &2603365594052348089
 GameObject:
   m_ObjectHideFlags: 0

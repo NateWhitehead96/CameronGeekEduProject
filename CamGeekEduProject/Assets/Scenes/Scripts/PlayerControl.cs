@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     public float groundCheckRadius;
     public GameObject JumpParticles;
 
-    public int Score;
+    public static int Score;
     // Start is called before the first frame update
     void Start()
     {

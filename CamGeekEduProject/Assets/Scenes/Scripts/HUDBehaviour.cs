@@ -16,6 +16,7 @@ public class HUDBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = "Score: " + FindObjectOfType<PlayerControl>().Score;
+        //ScoreText.text = "Score: " + FindObjectOfType<PlayerControl>().Score;
+        ScoreText.text = "Score: " + PlayerControl.Score;
     }
 }
