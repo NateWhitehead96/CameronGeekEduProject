@@ -10,6 +10,7 @@ public class LevelChanger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Gamemanager.instance.LevelsBeaten++;
             SceneManager.LoadScene(nextLevel);
         }
     }

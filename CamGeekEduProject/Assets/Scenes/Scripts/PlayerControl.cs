@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject JumpParticles;
 
     public static int Score;
+
+    public bool isInWater;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,21 +33,54 @@ public class PlayerControl : MonoBehaviour
 
     public void PlayerInput()
     {
-        if (!isGrounded)
+        if (!isInWater)
+        {
+            if (!isGrounded) // land controls
+            {
+                input = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            }
+            else if (isGrounded)
+            {
+                input = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                playerRigidBody.AddForce(new Vector2(0, jumpForce));
+                Instantiate(JumpParticles, groundCheck.position, JumpParticles.transform.rotation);
+                isGrounded = false; // shows we're jumping
+            }
+            playerRigidBody.velocity = new Vector2(input, playerRigidBody.velocity.y);
+        }
+
+        if (input == 0) // being idle/standing still in the water
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0); // rotate us back to 0
+        }
+
+        if (isInWater) // water controls
         {
             input = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        }else if (isGrounded)
-        {
-            input = 0;
+
+            transform.position = new Vector3(transform.position.x + input * Time.deltaTime, transform.position.y);
+
+            if(input > 0) // moving right in the water
+            {
+                transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -10); // rotate us 10 degrees
+            }
+            if(input < 0)// moving left in the water
+            {
+                transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 10); // rotate us 10 degrees
+            }
+            
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerRigidBody.AddForce(new Vector2(0, jumpForce));
+                Instantiate(JumpParticles, groundCheck.position, JumpParticles.transform.rotation);
+                isGrounded = false; // shows we're jumping
+            }
         }
-        
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            playerRigidBody.AddForce(new Vector2(0, jumpForce));
-            Instantiate(JumpParticles, groundCheck.position, JumpParticles.transform.rotation);
-            isGrounded = false; // shows we're jumping
-        }
-        playerRigidBody.velocity = new Vector2(input, playerRigidBody.velocity.y);
     }
     //void Checks()
     //{
@@ -58,6 +93,7 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground")) // when we hit ground we check the grounded bool
         {
             isGrounded = true;
+            isInWater = false;
         }
 
         if (collision.gameObject.CompareTag("Fly"))
@@ -65,5 +101,19 @@ public class PlayerControl : MonoBehaviour
             Score += 1; // score++;
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            isInWater = true;
+        }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            isInWater = false;
+        }
+    }
+
 }

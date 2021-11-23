@@ -6,7 +6,7 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
     public Transform respawnLocation;
-        void Start()
+    void Start()
     {
           
     }
