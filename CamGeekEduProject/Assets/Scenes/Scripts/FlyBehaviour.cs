@@ -8,6 +8,8 @@ public class FlyBehaviour : MonoBehaviour
     public int Direction; // will tell us if the fly should go up or down
     public float TopPosition;
     public float BotPosition;
+
+    public bool Collected;
     // Start is called before the first frame update
     void Start()
     {

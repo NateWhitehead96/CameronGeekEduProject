@@ -99,7 +99,7 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Fly"))
         {
             Score += 1; // score++;
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<FlyBehaviour>().Collected = true; // the fly we run into will be set to collected
         }
 
         if (collision.gameObject.CompareTag("Water"))
