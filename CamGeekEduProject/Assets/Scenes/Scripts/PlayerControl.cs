@@ -96,12 +96,6 @@ public class PlayerControl : MonoBehaviour
             isInWater = false;
         }
 
-        if (collision.gameObject.CompareTag("Fly"))
-        {
-            Score += 1; // score++;
-            collision.gameObject.GetComponent<FlyBehaviour>().Collected = true; // the fly we run into will be set to collected
-        }
-
         if (collision.gameObject.CompareTag("Water"))
         {
             isInWater = true;
@@ -113,6 +107,15 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Water"))
         {
             isInWater = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Fly"))
+        {
+            Score += 1; // score++;
+            collision.gameObject.GetComponent<FlyBehaviour>().Collected = true; // the fly we run into will be set to collected
         }
     }
 

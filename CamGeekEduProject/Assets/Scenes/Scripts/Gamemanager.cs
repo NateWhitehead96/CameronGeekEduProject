@@ -34,6 +34,14 @@ public class Gamemanager : MonoBehaviour
         PlayerPrefs.SetInt("LevelsBeaten", LevelsBeaten); // saving our levels beaten
         PlayerPrefs.SetInt("Score", PlayerControl.Score); // saving our score
 
+        for (int i = 0; i < LevelOneFlies.Count; i++)
+        {
+            PlayerPrefs.SetInt("LevelOneFly" + i, LevelOneFlies[i] ? 1 : 0); // saving each fly bool by using the name + i and using ? operator to check if its 1 or 0 aka true or false
+        }
+        for (int i = 0; i < LevelTwoFlies.Count; i++)
+        {
+            PlayerPrefs.SetInt("LevelTwoFly" + i, LevelTwoFlies[i] ? 1 : 0); // saving each fly bool by using the name + i and using ? operator to check if its 1 or 0 aka true or false
+        }
     }
 
     public void LoadData()
@@ -44,5 +52,13 @@ public class Gamemanager : MonoBehaviour
             PlayerControl.Score = PlayerPrefs.GetInt("Score");
         }
 
+        for (int i = 0; i < LevelOneFlies.Count; i++)
+        {
+            LevelOneFlies[i] = PlayerPrefs.GetInt("LevelOneFly" + i) == 1; // load each bool back into our level one fly list. we do a == at the end to do a check to see if the bool is = to 1
+        }
+        for (int i = 0; i < LevelTwoFlies.Count; i++)
+        {
+            LevelTwoFlies[i] = PlayerPrefs.GetInt("LevelTwoFly" + i) == 1; // load each bool back into our level one fly list. we do a == at the end to do a check to see if the bool is = to 1
+        }
     }
 }
