@@ -17,6 +17,8 @@ public class PlayerControl : MonoBehaviour
     public static int Score;
 
     public bool isInWater;
+
+    public Vector3 CheckpointPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -116,6 +118,11 @@ public class PlayerControl : MonoBehaviour
         {
             Score += 1; // score++;
             collision.gameObject.GetComponent<FlyBehaviour>().Collected = true; // the fly we run into will be set to collected
+        }
+
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            CheckpointPosition = collision.gameObject.transform.position;
         }
     }
 

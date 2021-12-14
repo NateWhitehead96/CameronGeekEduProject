@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelOneFlies: 00
-  LevelTwoFlies: 00000000
+  LevelTwoFlies: 000000000000
   LevelsBeaten: 0
