@@ -19,6 +19,9 @@ public class PlayerControl : MonoBehaviour
     public bool isInWater;
 
     public Vector3 CheckpointPosition;
+
+    public bool isDead = false;
+    public float WaterLevel; // the y value for the water
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,12 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerInput();
+        if (!isDead)
+        {
+            PlayerInput();
+        }
+        else
+            HitByHazard();
         //Checks();
         
     }
@@ -83,6 +91,24 @@ public class PlayerControl : MonoBehaviour
                 isGrounded = false; // shows we're jumping
             }
         }
+    }
+
+    public void HitByHazard()
+    {
+        // disable our collider
+        CircleCollider2D collider = GetComponent<CircleCollider2D>(); // get a reference to our collider
+        collider.enabled = false; // this will disable the collider
+        playerRigidBody.gravityScale = 0; // disable gravity
+        Vector3 distanceToCP = transform.position - CheckpointPosition; // finding the vector to the checkpoint
+        playerRigidBody.MovePosition(CheckpointPosition);
+        //transform.Translate(distanceToCP * 1 * Time.deltaTime); // moving us to the checkpoint
+        if (transform.position.x == CheckpointPosition.x) // when we hit the checkpoint enable collider and gravity
+        {
+            isDead = false;
+            collider.enabled = true;
+            playerRigidBody.gravityScale = 1;
+        }
+        
     }
     //void Checks()
     //{
