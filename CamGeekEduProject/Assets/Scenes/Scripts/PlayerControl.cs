@@ -21,11 +21,14 @@ public class PlayerControl : MonoBehaviour
     public Vector3 CheckpointPosition;
 
     public bool isDead = false;
+    public bool Dying; // bool to make sure we stop spamming the dying coroutine
     public float WaterLevel; // the y value for the water
+
+    public Animator animator; // this is the reference to our animator
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>(); // making sure we're asigning the animator to our animator controller
     }
 
     // Update is called once per frame
@@ -96,25 +99,22 @@ public class PlayerControl : MonoBehaviour
     public void HitByHazard()
     {
         // disable our collider
-        CircleCollider2D collider = GetComponent<CircleCollider2D>(); // get a reference to our collider
-        collider.enabled = false; // this will disable the collider
-        playerRigidBody.gravityScale = 0; // disable gravity
-        Vector3 distanceToCP = transform.position - CheckpointPosition; // finding the vector to the checkpoint
-        playerRigidBody.MovePosition(CheckpointPosition);
-        //transform.Translate(distanceToCP * 1 * Time.deltaTime); // moving us to the checkpoint
-        if (transform.position.x == CheckpointPosition.x) // when we hit the checkpoint enable collider and gravity
-        {
-            isDead = false;
-            collider.enabled = true;
-            playerRigidBody.gravityScale = 1;
-        }
+        animator.SetBool("isHurt", isDead); // play the hit by hazard animation
+        FindObjectOfType<FadeTransition>().FadeScreen();
+        
+        if(Dying == true)
+            StartCoroutine(ResetToCheckpoint()); // start a coroutine to wait some time and reset us back to idle state and our position to checkpoint position
         
     }
-    //void Checks()
-    //{
-        
-    //    isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-    //}
+    
+    IEnumerator ResetToCheckpoint()
+    {
+        Dying = false;
+        yield return new WaitForSeconds(2);
+        isDead = false;
+        animator.SetBool("isHurt", isDead);
+        transform.position = CheckpointPosition;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

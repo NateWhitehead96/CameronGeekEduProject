@@ -29,6 +29,7 @@ public class FloatingHazard : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerControl>().isDead = true; // now we flip the bool to true
+            collision.gameObject.GetComponent<PlayerControl>().Dying = true;
             // this will be rewritten next class and call a player function that will reset its position
             //collision.gameObject.GetComponent<PlayerControl>().transform.position = collision.gameObject.GetComponent<PlayerControl>().CheckpointPosition; // when the player hits the hazard set player pos to checkpoint pos
         }

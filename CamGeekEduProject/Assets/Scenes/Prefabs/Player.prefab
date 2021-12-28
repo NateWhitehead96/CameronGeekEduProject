@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2603365592838657151}
   - component: {fileID: 2603365592838657148}
   - component: {fileID: 2603365592838657149}
-  - component: {fileID: 2603365592838657150}
+  - component: {fileID: 2804071477323212421}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -58,6 +58,9 @@ MonoBehaviour:
   groundCheckRadius: 0.001
   JumpParticles: {fileID: 8841264241473200999, guid: b542d36da38700b48a81e2da41c84892, type: 3}
   isInWater: 0
+  CheckpointPosition: {x: 0, y: 0, z: 0}
+  isDead: 0
+  WaterLevel: 0
 --- !u!212 &2603365592838657151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,28 +149,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!114 &2603365592838657150
-MonoBehaviour:
+--- !u!95 &2804071477323212421
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2603365592838657144}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5e3fc049ea6a640bc20ef2e24ebc44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  jumpForce: 15
-  playerRigidBody: {fileID: 2603365592838657148}
-  groundCheck: {fileID: 2603365594052348088}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  groundCheckRadius: 1
-  JumpParticles: {fileID: 8841264241473200999, guid: b542d36da38700b48a81e2da41c84892, type: 3}
-  isInWater: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d2853a9c3cb989429a3bd31cfe307a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2603365594052348089
 GameObject:
   m_ObjectHideFlags: 0
