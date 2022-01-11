@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && transform.position.y < bounds) // for moving up
+        if (Input.GetKey(KeyCode.W) && transform.position.y < bounds || Input.GetKey(KeyCode.UpArrow) && transform.position.y < bounds) // for moving up
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && transform.position.y > -bounds) // for moving down
+        if (Input.GetKey(KeyCode.S) && transform.position.y > -bounds || Input.GetKey(KeyCode.DownArrow) && transform.position.y > -bounds) // for moving down
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
         }
