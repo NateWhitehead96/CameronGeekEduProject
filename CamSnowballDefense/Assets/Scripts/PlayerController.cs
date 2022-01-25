@@ -24,10 +24,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.Space)) // shooting the snowball
+        if (Input.GetMouseButtonDown(0)) // shooting the snowball
         {
-            // instantiate wants 3 things. the thing to spawn, the location, and the rotation
-            Instantiate(Snowball, transform.position, Quaternion.identity);
+            ShootSnowball(); // we can actually shoot 
         }
+    }
+
+    void ShootSnowball()
+    {
+        GameObject newSnowball = Instantiate(Snowball, transform.position, Quaternion.identity); // create a local variable so we can change things on the snowball
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // finding mouse position
+        Vector3 shootDirection = mousePosition - transform.position; // find the vector between player and mouse
+        newSnowball.GetComponent<SnowballScript>().MoveToPosition = new Vector3(shootDirection.x, shootDirection.y); // apply the movement to the snowball
     }
 }
