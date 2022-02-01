@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
     public int moveSpeed; // how fast we travel
     public GameObject Snowball; // the snowball prefab
     public float bounds;
+
+    public bool shooting; // tell us if we're shooting or not
+
+    public float shootSpeed; // how fast we can shoot
+    public float snowballSize; // how fat our snowballs are
     // Start is called before the first frame update
     void Start()
     {
@@ -24,17 +29,34 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
         }
-        if (Input.GetMouseButtonDown(0)) // shooting the snowball
+        if (Input.GetMouseButtonDown(0) && shooting == false) // shooting the snowball
         {
-            ShootSnowball(); // we can actually shoot 
+            StartCoroutine(ShootSnowball()); // we can actually shoot 
         }
     }
 
-    void ShootSnowball()
+    IEnumerator ShootSnowball()
     {
+        shooting = true; // we're now shooting the snowball
         GameObject newSnowball = Instantiate(Snowball, transform.position, Quaternion.identity); // create a local variable so we can change things on the snowball
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // finding mouse position
         Vector3 shootDirection = mousePosition - transform.position; // find the vector between player and mouse
         newSnowball.GetComponent<SnowballScript>().MoveToPosition = new Vector3(shootDirection.x, shootDirection.y); // apply the movement to the snowball
+        yield return new WaitForSeconds(1); // attack speed/shoot speed
+        shooting = false; // flip shooting back off
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(collision.gameObject); // to make sure the collision works
+            //Powerup powerup = collision.gameObject.GetComponent<Powerup>(); // this is so we can access the powerup script from the collision
+
+            //if(powerup.type == Type.IncreaseShootSpeed)
+            //{
+            //    shootSpeed -= 0.1f; // decrease the shoot cool down
+            //}
+        }
     }
 }
