@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoringSystem : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class ScoringSystem : MonoBehaviour
         ScoreDisplay.text = "Score: " + score; // the text will display the score;
         LivesDisplay.text = "Lives: " + lives; // display lives
         WaveDisplay.text = "Wave: " + currentWave; // display wave
+
+        if(lives <= 0)
+        {
+            SceneManager.LoadScene(0); // loading the play scene
+        }
     }
 }

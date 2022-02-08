@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // finding mouse position
         Vector3 shootDirection = mousePosition - transform.position; // find the vector between player and mouse
         newSnowball.GetComponent<SnowballScript>().MoveToPosition = new Vector3(shootDirection.x, shootDirection.y); // apply the movement to the snowball
-        yield return new WaitForSeconds(1); // attack speed/shoot speed
+        newSnowball.transform.localScale = new Vector3(snowballSize, snowballSize, 1); // setting the snowball size
+        yield return new WaitForSeconds(shootSpeed); // attack speed/shoot speed
         shooting = false; // flip shooting back off
     }
 
@@ -50,13 +51,21 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Powerup"))
         {
-            Destroy(collision.gameObject); // to make sure the collision works
-            //Powerup powerup = collision.gameObject.GetComponent<Powerup>(); // this is so we can access the powerup script from the collision
+            Powerup powerup = collision.gameObject.GetComponent<Powerup>(); // this is so we can access the powerup script from the collision
 
-            //if(powerup.type == Type.IncreaseShootSpeed)
-            //{
-            //    shootSpeed -= 0.1f; // decrease the shoot cool down
-            //}
+            if (powerup.type == Type.IncreaseShootSpeed)
+            {
+                shootSpeed -= 0.1f; // decrease the shoot cool down
+            }
+            if(powerup.type == Type.IncreaseSnowballSize)
+            {
+                snowballSize += 0.1f; // increase snowball size
+            }
+            if(powerup.type == Type.IncreaseHealth)
+            {
+                ScoringSystem.lives++; // increase health
+            }
+            Destroy(collision.gameObject); // to make sure the collision works
         }
     }
 }
