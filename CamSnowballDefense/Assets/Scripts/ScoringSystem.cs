@@ -19,6 +19,7 @@ public class ScoringSystem : MonoBehaviour
     {
         lives = 3;
         currentWave = 1;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -27,10 +28,11 @@ public class ScoringSystem : MonoBehaviour
         ScoreDisplay.text = "Score: " + score; // the text will display the score;
         LivesDisplay.text = "Lives: " + lives; // display lives
         WaveDisplay.text = "Wave: " + currentWave; // display wave
+        ScoreKeeper.instance.score = score; // any score we gain while playing is stored to our score keeper
 
         if(lives <= 0)
         {
-            SceneManager.LoadScene(0); // loading the play scene
+            SceneManager.LoadScene("GameOver"); // loading the game over scene
         }
     }
 }
