@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Tile[] tiles; // array (aka list) of our tiles
 
     public LayerMask sunlayer; // the layermask the suns are clickable on
+
+    public Text SunDisplay; // the text that displays our sun amount
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SunDisplay.text = suns.ToString();
         if (Input.GetMouseButtonDown(0) && plantToPlace != null) // placing plant
         {
             Tile nearestTile = null; // this tile will be the nearest tile to our left click
