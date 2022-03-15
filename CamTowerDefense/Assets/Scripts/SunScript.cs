@@ -18,6 +18,7 @@ public class SunScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime); // slowly move the sun down
         if(transform.position.y <= -6)
         {
+            FindObjectOfType<GameManager>().suns += increaseSunAmount; // increase sun amount when the sun goes off screen
             Destroy(gameObject); // when the sun falls off screen, destroy
         }
     }

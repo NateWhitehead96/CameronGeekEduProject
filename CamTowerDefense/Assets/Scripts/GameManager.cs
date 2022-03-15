@@ -41,7 +41,8 @@ public class GameManager : MonoBehaviour
             }
             if (nearestTile.isOccupied == false) // that tile is not occupied then we spawn a plant
             {
-                Instantiate(plantToPlace, nearestTile.transform.position, Quaternion.identity); // spawn plant
+                Building newPlant = Instantiate(plantToPlace, nearestTile.transform.position, Quaternion.identity); // spawn plant
+                newPlant.tile = nearestTile; // set the tile of the plant to be the tile we place the plant on
                 plantToPlace = null; // reset our plant to place
                 nearestTile.isOccupied = true; // make sure that tile is now occupied
                 Cursor.visible = true; // reshow our defualt cursor
@@ -62,6 +63,13 @@ public class GameManager : MonoBehaviour
                 suns += hit.collider.GetComponent<SunScript>().increaseSunAmount; // increase our suns
                 Destroy(hit.collider.gameObject); // destroy the sun
             }
+        }
+        if(Input.GetMouseButtonDown(1) && plantToPlace != null) // when we right click and have a plant on our mouse
+        {
+            suns += plantToPlace.cost; // refund the cost of the plant
+            plantToPlace = null; // take the plant off of our cursor
+            Cursor.visible = true; // we can see the mouse
+            customCursor.gameObject.SetActive(false); // hide the custom cursor
         }
     }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3296739956806946678}
   - component: {fileID: 9213393398325698444}
   - component: {fileID: 8563395051517856000}
+  - component: {fileID: 760976377257340419}
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 50
+  health: 3
 --- !u!114 &8563395051517856000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +113,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PeaBullet: {fileID: 177084736581346657, guid: 10cd2e3f01d2edc4d8d774a80efd8210, type: 3}
   timer: 3
+--- !u!61 &760976377257340419
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309529085484114490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5877527, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.72, y: 6.72}
+    newSize: {x: 6.72, y: 6.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.45671, y: 6.72}
+  m_EdgeRadius: 0

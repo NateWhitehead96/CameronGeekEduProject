@@ -9,21 +9,32 @@ public class ZombieSpawner : MonoBehaviour
 
     public float StartTime; // the inital time it take before the zombies start spawning
     public float Timer; // help with spawning zombie at regular intervals
+
+    public bool gameStart; // a bool to know when we should start spawning zombies
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(GracePeriod());
+    }
+
+    IEnumerator GracePeriod()
+    {
+        yield return new WaitForSeconds(10); // the inital wait
+        gameStart = true; // after waiting we can start spawning zombies
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Timer >= 10)
+        if (gameStart == true) // only after the grace period will we start spawning zombies
         {
-            int randomPoint = Random.Range(0, SpawnPoints.Length); // find a random point to spawn the zombie at
-            Instantiate(Zombie, SpawnPoints[randomPoint].position, transform.rotation); // spawn zombie
-            Timer = 0; // reset timer
+            if (Timer >= 10)
+            {
+                int randomPoint = Random.Range(0, SpawnPoints.Length); // find a random point to spawn the zombie at
+                Instantiate(Zombie, SpawnPoints[randomPoint].position, transform.rotation); // spawn zombie
+                Timer = 0; // reset timer
+            }
+            Timer += Time.deltaTime;
         }
-        Timer += Time.deltaTime;
     }
 }
