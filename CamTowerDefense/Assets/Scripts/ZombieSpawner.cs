@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public GameObject Zombie;
+    public GameObject[] Zombie;
     public Transform[] SpawnPoints;
 
     public float StartTime; // the inital time it take before the zombies start spawning
@@ -31,7 +31,8 @@ public class ZombieSpawner : MonoBehaviour
             if (Timer >= 10)
             {
                 int randomPoint = Random.Range(0, SpawnPoints.Length); // find a random point to spawn the zombie at
-                Instantiate(Zombie, SpawnPoints[randomPoint].position, transform.rotation); // spawn zombie
+                int randomZombie = Random.Range(0, Zombie.Length); // find a random zombie from the zombie list to spawn
+                Instantiate(Zombie[randomZombie], SpawnPoints[randomPoint].position, transform.rotation); // spawn zombie
                 Timer = 0; // reset timer
             }
             Timer += Time.deltaTime;

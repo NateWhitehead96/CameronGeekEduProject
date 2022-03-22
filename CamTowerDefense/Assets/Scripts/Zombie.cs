@@ -18,7 +18,10 @@ public class Zombie : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
-
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision) // for collision with the peas
@@ -27,10 +30,10 @@ public class Zombie : MonoBehaviour
         {
             health--;
             Destroy(collision.gameObject); // destroy the pea
-            if(health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            //if(health <= 0)
+            //{
+            //    Destroy(gameObject);
+            //}
         }
     }
     private void OnCollisionEnter2D(Collision2D collision) // colliding with the plant buildings

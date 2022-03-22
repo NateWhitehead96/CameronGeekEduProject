@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 25
   health: 2
+  tile: {fileID: 0}
 --- !u!114 &3342017376886680706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sun: {fileID: 2676206282924768375, guid: 808a613c2c642df4ba7bd5d19c46fda5, type: 3}
   timer: 5
+  SpawnSunTime: 5
 --- !u!61 &263174648066831077
 BoxCollider2D:
   m_ObjectHideFlags: 0

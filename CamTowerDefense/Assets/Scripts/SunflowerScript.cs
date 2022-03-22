@@ -6,6 +6,7 @@ public class SunflowerScript : MonoBehaviour
 {
     public GameObject Sun; // the prefab sun we spawn
     public float timer; // will keep track of when to spawn the sun
+    public float SpawnSunTime; // the time it takes to spawn a sun
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class SunflowerScript : MonoBehaviour
         if(timer <= 0)
         {
             Instantiate(Sun, transform.position, transform.rotation); // spawn the sun
-            timer = 5; // reset timer
+            timer = SpawnSunTime; // reset timer
         }
     }
 }
