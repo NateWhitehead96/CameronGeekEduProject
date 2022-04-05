@@ -11,7 +11,7 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<ZombieSpawner>().remainderEnemies++;
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class Zombie : MonoBehaviour
         transform.position = new Vector3(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
         if(health <= 0)
         {
+            FindObjectOfType<ZombieSpawner>().UpdateEnemiesRemaining();
             Destroy(gameObject);
         }
     }
@@ -35,14 +36,25 @@ public class Zombie : MonoBehaviour
             //    Destroy(gameObject);
             //}
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision) // colliding with the plant buildings
-    {
         if (collision.gameObject.GetComponent<Building>()) // if the zombie collides with the plant
         {
+            moveSpeed = 0; // stop the zombie from moving
             plantWereAttacking = collision.gameObject.GetComponent<Building>(); // know what plant the zombie is colliding with
             InvokeRepeating("DamagePlant", 1, 1); // it will constantly call the "DamagePlant" function every second
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        moveSpeed = 1; // reset movespeed
+        if(plantWereAttacking != null)
+        {
+            plantWereAttacking = null; // make sure no memory leaks and reset this variable
+            CancelInvoke("DamagePlant"); // make sure it stops attacking
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision) // colliding with the plant buildings
+    {
+        
     }
 
     void DamagePlant()
@@ -52,6 +64,7 @@ public class Zombie : MonoBehaviour
         {
             plantWereAttacking.tile.isOccupied = false; // free up that tile space for a new building/plant
             Destroy(plantWereAttacking.gameObject);
+            moveSpeed = 1; // reapply some move speed after they kill a plant
             CancelInvoke(); // stop the damagin plant invoke
         }
     }

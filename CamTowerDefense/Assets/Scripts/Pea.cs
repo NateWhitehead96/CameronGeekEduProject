@@ -16,7 +16,7 @@ public class Pea : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y); // move the pea
 
-        if(transform.position.x > 12) // when the pea goes off screen destroy it
+        if(transform.position.x > 10) // when the pea goes off screen destroy it
         {
             Destroy(gameObject);
         }
