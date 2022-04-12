@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 10
-  health: 10
+  health: 2
   tile: {fileID: 0}
 --- !u!114 &2490213531275742196
 MonoBehaviour:
@@ -142,3 +142,4 @@ MonoBehaviour:
   zombieLayer:
     serializedVersion: 2
     m_Bits: 128
+  timer: 0

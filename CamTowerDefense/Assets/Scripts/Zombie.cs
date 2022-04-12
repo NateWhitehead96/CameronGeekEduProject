@@ -8,16 +8,24 @@ public class Zombie : MonoBehaviour
     public int health;
 
     public Building plantWereAttacking; // hold the plant we want to deal damage to
+    public GameObject GameOverCanvas;
     // Start is called before the first frame update
     void Start()
     {
         FindObjectOfType<ZombieSpawner>().remainderEnemies++;
+        GameOverCanvas = FindObjectOfType<GameOver>().gameObject; // make sure every zombie has access to showing/hiding the go canvas
+        GameOverCanvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = new Vector3(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
+        if(transform.position.x <= -10)
+        {
+            GameOverCanvas.SetActive(true); // show canvas
+            Time.timeScale = 0; // pause time
+        }
         if(health <= 0)
         {
             FindObjectOfType<ZombieSpawner>().UpdateEnemiesRemaining();
@@ -45,16 +53,29 @@ public class Zombie : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        moveSpeed = 1; // reset movespeed
-        if(plantWereAttacking != null)
+        if (collision.gameObject.GetComponent<Building>())
         {
-            plantWereAttacking = null; // make sure no memory leaks and reset this variable
-            CancelInvoke("DamagePlant"); // make sure it stops attacking
+            moveSpeed = 1; // reset movespeed
+            if (plantWereAttacking != null)
+            {
+                plantWereAttacking = null; // make sure no memory leaks and reset this variable
+                CancelInvoke("DamagePlant"); // make sure it stops attacking
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision) // colliding with the plant buildings
     {
-        
+        if (collision.gameObject.CompareTag("Zombie"))
+        {
+            moveSpeed = 0; // stops moving when in contact with another zombie
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Zombie"))
+        {
+            moveSpeed = 1; // when its stopped touching the zombie, it can move
+        }
     }
 
     void DamagePlant()

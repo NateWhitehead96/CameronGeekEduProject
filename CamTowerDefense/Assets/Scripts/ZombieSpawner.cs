@@ -58,7 +58,7 @@ public class ZombieSpawner : MonoBehaviour
     IEnumerator StartNextWave()
     {
         gameStart = false; // stop the spawning
-        waveDelay += 10; // increase our wait by 10 seconds every wave
+        waveDelay = 30; // increase our wait by 10 seconds every wave
         yield return new WaitForSeconds(waveDelay);
         wave++; // increase our wave
         numberOfEnemies = wave * 3; // 3 times the wave number of enemies will spawn
