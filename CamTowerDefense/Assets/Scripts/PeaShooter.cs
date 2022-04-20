@@ -6,6 +6,7 @@ public class PeaShooter : MonoBehaviour
 {
     public GameObject PeaBullet; // prefab of the pea
     public float timer;
+    public float reloadSpeed; // how often it can shoot
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class PeaShooter : MonoBehaviour
         if (timer <= 0)
         {
             Instantiate(PeaBullet, transform.position, transform.rotation); // spawn the bullet
-            timer = 3; // reset timer
+            timer = reloadSpeed; // reset timer
         }
     }
 }

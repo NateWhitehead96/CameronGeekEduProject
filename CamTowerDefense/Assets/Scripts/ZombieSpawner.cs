@@ -19,6 +19,8 @@ public class ZombieSpawner : MonoBehaviour
     public Text WaveText; // display the wave we're on
     public Text EnemiesRemainingText; // display on how many zombies are left
     public int remainderEnemies;
+
+    public Animator incWaveAlert; // access to incoming wave animator
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,9 @@ public class ZombieSpawner : MonoBehaviour
         gameStart = false; // stop the spawning
         waveDelay = 30; // increase our wait by 10 seconds every wave
         yield return new WaitForSeconds(waveDelay);
+        incWaveAlert.SetBool("incoming", true);
+        yield return new WaitForSeconds(1); // delay for animation
+        incWaveAlert.SetBool("incoming", false);
         wave++; // increase our wave
         numberOfEnemies = wave * 3; // 3 times the wave number of enemies will spawn
         gameStart = true; // restart the spawning process
