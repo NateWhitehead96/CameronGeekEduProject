@@ -15,10 +15,23 @@ public class GameManager : MonoBehaviour
     public LayerMask sunlayer; // the layermask the suns are clickable on
 
     public Text SunDisplay; // the text that displays our sun amount
+
+    // Loading plant types to our buttons variables
+    public Building[] plants; // all of the different building/plants we can build
+    public Button[] buttons; // all of the plant buttons
+    public Text[] plantCosts; // of the plant costs
+    public Sprite[] plantSprites; // hold all of the plant sprites for us
     // Start is called before the first frame update
     void Start()
     {
         customCursor.gameObject.SetActive(false); // to make sure the cursor is hidden when we dont have a building selected
+        for (int i = 0; i < buttons.Length; i++) // loop through all buttons
+        {
+            int newPlant = Random.Range(0, plants.Length); // find us a new random plant to place on that button
+            buttons[i].onClick.AddListener(delegate { BuyPlant(plants[newPlant]); }) ; // adds a on click event to the button
+            buttons[i].GetComponent<Image>().sprite = plantSprites[newPlant]; // set the new image of the button
+            plantCosts[i].text = plants[newPlant].cost.ToString(); // display the cost of the plant
+        }
     }
 
     // Update is called once per frame
