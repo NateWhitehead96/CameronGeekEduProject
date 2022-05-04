@@ -21,17 +21,42 @@ public class GameManager : MonoBehaviour
     public Button[] buttons; // all of the plant buttons
     public Text[] plantCosts; // of the plant costs
     public Sprite[] plantSprites; // hold all of the plant sprites for us
+
+    public PlantSelector selector; // this will be a reference to the selector
+
     // Start is called before the first frame update
     void Start()
     {
+        selector = FindObjectOfType<PlantSelector>(); // link the selector to the one from our first scene
+        // first button
+        buttons[0].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[0]); });
+        buttons[0].GetComponent<Image>().sprite = selector.plantsChosen[0].GetComponent<SpriteRenderer>().sprite;
+        plantCosts[0].text = selector.plantsChosen[0].cost.ToString();
+        // second button
+        buttons[1].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[1]); });
+        buttons[1].GetComponent<Image>().sprite = selector.plantsChosen[1].GetComponent<SpriteRenderer>().sprite;
+        plantCosts[1].text = selector.plantsChosen[1].cost.ToString();
+        //third button
+        buttons[2].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[2]); });
+        buttons[2].GetComponent<Image>().sprite = selector.plantsChosen[2].GetComponent<SpriteRenderer>().sprite;
+        plantCosts[2].text = selector.plantsChosen[2].cost.ToString();
+        // fourth button
+        buttons[3].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[3]); });
+        buttons[3].GetComponent<Image>().sprite = selector.plantsChosen[3].GetComponent<SpriteRenderer>().sprite;
+        plantCosts[3].text = selector.plantsChosen[3].cost.ToString();
+
         customCursor.gameObject.SetActive(false); // to make sure the cursor is hidden when we dont have a building selected
-        for (int i = 0; i < buttons.Length; i++) // loop through all buttons
-        {
-            int newPlant = Random.Range(0, plants.Length); // find us a new random plant to place on that button
-            buttons[i].onClick.AddListener(delegate { BuyPlant(plants[newPlant]); }) ; // adds a on click event to the button
-            buttons[i].GetComponent<Image>().sprite = plantSprites[newPlant]; // set the new image of the button
-            plantCosts[i].text = plants[newPlant].cost.ToString(); // display the cost of the plant
-        }
+        //for (int i = 0; i < buttons.Length; i++) // loop through all buttons
+        //{
+        //    int newPlant = Random.Range(0, plants.Length); // find us a new random plant to place on that button
+        //    buttons[i].onClick.AddListener(delegate { BuyPlant(plants[newPlant]); }); // adds a on click event to the button
+        //    buttons[i].GetComponent<Image>().sprite = plantSprites[newPlant]; // set the new image of the button
+        //    plantCosts[i].text = plants[newPlant].cost.ToString(); // display the cost of the plant
+        //}
+        //buttons[0].onClick.AddListener(delegate { BuyPlant(PlantsToUse[0]); });
+        //buttons[1].onClick.AddListener(delegate { BuyPlant(PlantsToUse[1]); });
+        //buttons[2].onClick.AddListener(delegate { BuyPlant(PlantsToUse[2]); });
+        //buttons[3].onClick.AddListener(delegate { BuyPlant(PlantsToUse[3]); });
     }
 
     // Update is called once per frame
