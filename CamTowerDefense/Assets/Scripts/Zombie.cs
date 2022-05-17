@@ -60,7 +60,7 @@ public class Zombie : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Zombie"))
         {
-            moveSpeed = 0; // stops moving when in contact with another zombie
+            moveSpeed = 0.2f; // stops moving when in contact with another zombie
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

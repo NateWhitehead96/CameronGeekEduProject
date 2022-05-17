@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlantSelector.unity
+    guid: 6044a6f4493b45146b4bcf7990906a99
   m_configObjects: {}

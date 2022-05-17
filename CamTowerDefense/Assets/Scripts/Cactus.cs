@@ -26,6 +26,15 @@ public class Cactus : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Zombie>())
+        {
+            zombieToHit = null; // clear the zombie
+            CancelInvoke(); // stops playing hurt zombie
+        }
+    }
+
     public void HurtZombie()
     {
         zombieToHit.health--; // decrease the zombies health
