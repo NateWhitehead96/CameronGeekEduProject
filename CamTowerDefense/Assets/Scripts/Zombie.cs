@@ -12,6 +12,7 @@ public class Zombie : MonoBehaviour
     void Start()
     {
         FindObjectOfType<ZombieSpawner>().remainderEnemies++;
+        SoundEffectManager.instance.zombieSpawn.Play(); // play the sound effect
     }
 
     // Update is called once per frame

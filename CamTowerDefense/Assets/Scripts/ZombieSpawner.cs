@@ -63,6 +63,7 @@ public class ZombieSpawner : MonoBehaviour
         waveDelay = 30; // increase our wait by 10 seconds every wave
         yield return new WaitForSeconds(waveDelay);
         incWaveAlert.SetBool("incoming", true);
+        SoundEffectManager.instance.waveIncoming.Play(); // play that sound effect
         yield return new WaitForSeconds(1); // delay for animation
         incWaveAlert.SetBool("incoming", false);
         wave++; // increase our wave

@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
             }
             if (nearestTile.isOccupied == false) // that tile is not occupied then we spawn a plant
             {
+                SoundEffectManager.instance.plantPlacement.Play(); // play the placement sound effect
                 Building newPlant = Instantiate(plantToPlace, nearestTile.transform.position, Quaternion.identity); // spawn plant
                 newPlant.tile = nearestTile; // set the tile of the plant to be the tile we place the plant on
                 plantToPlace = null; // reset our plant to place
