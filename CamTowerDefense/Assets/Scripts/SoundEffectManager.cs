@@ -34,6 +34,9 @@ public class SoundEffectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        volume = SoundVolumeMaster.instance.soundFXVolume; // set the volume for sound effects
+        waveIncoming.volume = volume;
+        plantPlacement.volume = volume;
+        zombieSpawn.volume = volume;
     }
 }

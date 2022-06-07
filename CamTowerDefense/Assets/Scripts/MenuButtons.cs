@@ -11,7 +11,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void SettingButton()
     {
-        //SceneManager.LoadScene("Settings"); // load the setting screen
+        SceneManager.LoadScene("Settings"); // load the setting screen
     }
     public void ExitButton()
     {

@@ -33,6 +33,6 @@ public class PlantSelector : MonoBehaviour
     public void PlayGame()
     {
         if(plantsChosen.Count == 4)
-            SceneManager.LoadScene(0); // load our game scene
+            SceneManager.LoadScene(1); // load our game scene
     }
 }

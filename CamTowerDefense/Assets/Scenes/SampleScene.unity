@@ -415,6 +415,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOccupied: 0
+--- !u!114 &81760557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6162912500567588063, guid: 6d483694e63938743a53c8ad857b8167, type: 3}
+  m_PrefabInstance: {fileID: 635045618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324aa6d63f3ca724fa30f7a2aaf18ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &90618448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584023741}
   - component: {fileID: 584023740}
+  - component: {fileID: 584023742}
   m_Layer: 0
   m_Name: Yarn1
   m_TagString: Untagged
@@ -2189,6 +2201,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584023742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584023739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af3544efd661f74db27cd9d86994bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
 --- !u!1 &621158361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,7 +2380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6162912500567588060, guid: 6d483694e63938743a53c8ad857b8167, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6162912500567588062, guid: 6d483694e63938743a53c8ad857b8167, type: 3}
       propertyPath: m_RootOrder
@@ -4615,7 +4640,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c39ec488b321fe4e96a9464fb97683d, type: 3}
   - {fileID: 21300000, guid: 4b569926399c64847b58b0ff27869bf5, type: 3}
   - {fileID: 21300000, guid: 4c0ae8a7771b4a0478660a1b9cf6c9f6, type: 3}
-  selector: {fileID: 0}
+  selector: {fileID: 81760557}
 --- !u!4 &1319683701
 Transform:
   m_ObjectHideFlags: 0
@@ -4644,9 +4669,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zombie:
   - {fileID: 3677828863980389640, guid: 5467cd9078db7f64fb6f9472ebc388df, type: 3}
+  - {fileID: 6443350036349924569, guid: 451233c2aa07e62489738104dc143037, type: 3}
   - {fileID: 1259573525029871433, guid: eb49eb6380bdadc4eb35d7354aece903, type: 3}
   - {fileID: 5550355475025057457, guid: b3aeccb5133289d4b9911faeac800b76, type: 3}
-  - {fileID: 6443350036349924569, guid: 451233c2aa07e62489738104dc143037, type: 3}
   - {fileID: 6881466450798524273, guid: a08e85a4129be00499367b017988302d, type: 3}
   SpawnPoints:
   - {fileID: 633064511}

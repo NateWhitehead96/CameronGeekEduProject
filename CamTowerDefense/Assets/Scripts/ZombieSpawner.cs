@@ -21,6 +21,7 @@ public class ZombieSpawner : MonoBehaviour
     public int remainderEnemies;
 
     public Animator incWaveAlert; // access to incoming wave animator
+    int randomZombie; // to know which zombie to spawn
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +44,19 @@ public class ZombieSpawner : MonoBehaviour
         {
             if (Timer >= 1 && numberOfEnemies > 0) // still have enemies to spawn
             {
+                if(wave < 3)
+                {
+                    randomZombie = Random.Range(0, 2); // find a random zombie that is one of the easy 2
+                }
+                if(wave >= 3 && wave < 6)
+                {
+                    randomZombie = Random.Range(1, 3); // find a random zombie that is one of the easy 2
+                }
+                if(wave >= 5) 
+                {
+                    randomZombie = Random.Range(0, Zombie.Length); // find any random zombie to spawn
+                }
                 int randomPoint = Random.Range(0, SpawnPoints.Length); // find a random point to spawn the zombie at
-                int randomZombie = Random.Range(0, Zombie.Length); // find a random zombie from the zombie list to spawn
                 Instantiate(Zombie[randomZombie], SpawnPoints[randomPoint].position, transform.rotation); // spawn zombie
                 Timer = 0; // reset timer
                 numberOfEnemies--; // subtract one
