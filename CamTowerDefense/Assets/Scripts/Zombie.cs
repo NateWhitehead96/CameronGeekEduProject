@@ -13,6 +13,7 @@ public class Zombie : MonoBehaviour
     {
         FindObjectOfType<ZombieSpawner>().remainderEnemies++;
         SoundEffectManager.instance.zombieSpawn.Play(); // play the sound effect
+        health += FindObjectOfType<ZombieSpawner>().wave; // buff zombie health by wave number
     }
 
     // Update is called once per frame

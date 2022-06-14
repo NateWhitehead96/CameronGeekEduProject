@@ -21,16 +21,16 @@ public class GameOver : MonoBehaviour
         WaveCompleted.text = "You completed " + spawner.wave + " waves!";
     }
 
-    public void ReplayGame()
+    public void ReplayGame(int levelToLoad)
     {
         SaveWave();
-        SceneManager.LoadScene(1); // 0 for now, might change if we have more scenes
+        SceneManager.LoadScene(levelToLoad); // 0 for now, might change if we have more scenes
     }
     public void RepickPlants()
     {
         SaveWave();
         Destroy(selector); // deleting the selector so we dont have 2 in the selector scene
-        SceneManager.LoadScene(2); // to open the plant selection screen
+        SceneManager.LoadScene("PlantSelector"); // to open the plant selection screen
     }
 
     void SaveWave()

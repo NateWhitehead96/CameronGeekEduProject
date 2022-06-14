@@ -30,9 +30,15 @@ public class PlantSelector : MonoBehaviour
         }
     }
 
-    public void PlayGame()
+    public void PlayGame(int levelToLoad)
     {
         if(plantsChosen.Count == 4)
-            SceneManager.LoadScene(1); // load our game scene
+            SceneManager.LoadScene(levelToLoad); // load our game scene
+
+        if (levelToLoad == 0)
+        {
+            SceneManager.LoadScene(levelToLoad);
+            Destroy(gameObject); // to avoid having more selectors if we go to menu and back to playing
+        }
     }
 }
