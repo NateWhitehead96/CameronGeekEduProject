@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
     public Text WaveCompleted; // help display how many waves you beat
     public ZombieSpawner spawner;
     public GameObject selector; // so we can destroy this gameobject
+    public InputField nameField; // where the player can input a name
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,17 @@ public class GameOver : MonoBehaviour
         {
             GameData.instance.waves = spawner.wave;
         }
+
+        for (int i = 0; i < GameData.instance.wavesCompleted.Length; i++) // loop through all of the saved completed waves
+        {
+            if(spawner.wave > GameData.instance.wavesCompleted[i]) // if our wave is bigger
+            {
+                GameData.instance.wavesCompleted[i] = spawner.wave; // save the wave
+                GameData.instance.playerNames[i] = nameField.text; // save the name
+                return;
+            }
+        }
+
         GameData.instance.SaveData(); // save the games data
     }
 }
