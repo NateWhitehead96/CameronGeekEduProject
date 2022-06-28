@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlantButton : MonoBehaviour
 {
     public Button self; // so the button references itself when we want to make it interactable
+    public Building plant; // what plant type this button will be
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,8 @@ public class PlantButton : MonoBehaviour
 
     public void BuyingCooldown()
     {
-        StartCoroutine(Cooldown());
+        if(plant.cost <= FindObjectOfType<GameManager>().suns) // only if we have the moolah do we make it cooldown
+            StartCoroutine(Cooldown());
     }
 
     IEnumerator Cooldown()

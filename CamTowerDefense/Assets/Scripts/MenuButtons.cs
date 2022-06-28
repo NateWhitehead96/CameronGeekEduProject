@@ -17,4 +17,8 @@ public class MenuButtons : MonoBehaviour
     {
         Application.Quit(); // close the game, only works in a build version
     }
+    public void LeaderboardButton()
+    {
+        SceneManager.LoadScene("LeaderBoard"); // open leaderboard scene
+    }
 }

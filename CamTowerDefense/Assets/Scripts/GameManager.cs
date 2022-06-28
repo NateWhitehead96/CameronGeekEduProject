@@ -31,18 +31,22 @@ public class GameManager : MonoBehaviour
         // first button
         buttons[0].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[0]); });
         buttons[0].GetComponent<Image>().sprite = selector.plantsChosen[0].GetComponent<SpriteRenderer>().sprite;
+        buttons[0].GetComponent<PlantButton>().plant = selector.plantsChosen[0]; // set the "plant" of the button
         plantCosts[0].text = selector.plantsChosen[0].cost.ToString();
         // second button
         buttons[1].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[1]); });
         buttons[1].GetComponent<Image>().sprite = selector.plantsChosen[1].GetComponent<SpriteRenderer>().sprite;
+        buttons[1].GetComponent<PlantButton>().plant = selector.plantsChosen[1]; // set the "plant" of the button
         plantCosts[1].text = selector.plantsChosen[1].cost.ToString();
         //third button
         buttons[2].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[2]); });
         buttons[2].GetComponent<Image>().sprite = selector.plantsChosen[2].GetComponent<SpriteRenderer>().sprite;
+        buttons[2].GetComponent<PlantButton>().plant = selector.plantsChosen[2]; // set the "plant" of the button
         plantCosts[2].text = selector.plantsChosen[2].cost.ToString();
         // fourth button
         buttons[3].onClick.AddListener(delegate { BuyPlant(selector.plantsChosen[3]); });
         buttons[3].GetComponent<Image>().sprite = selector.plantsChosen[3].GetComponent<SpriteRenderer>().sprite;
+        buttons[3].GetComponent<PlantButton>().plant = selector.plantsChosen[3]; // set the "plant" of the button
         plantCosts[3].text = selector.plantsChosen[3].cost.ToString();
 
         customCursor.gameObject.SetActive(false); // to make sure the cursor is hidden when we dont have a building selected

@@ -243,7 +243,7 @@ MonoBehaviour:
   WaveCompleted: {fileID: 1532809086}
   spawner: {fileID: 1319683702}
   selector: {fileID: 0}
-  nameField: {fileID: 0}
+  nameField: {fileID: 1675823168}
 --- !u!1 &62693039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 0}
+  plant: {fileID: 0}
 --- !u!1 &429290446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +1923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 0}
+  plant: {fileID: 0}
 --- !u!1 &549850771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6162912500567588060, guid: 6d483694e63938743a53c8ad857b8167, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6162912500567588062, guid: 6d483694e63938743a53c8ad857b8167, type: 3}
       propertyPath: m_RootOrder
@@ -2597,6 +2599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 0}
+  plant: {fileID: 0}
 --- !u!1 &694532149
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,6 +6124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 0}
+  plant: {fileID: 0}
 --- !u!1 &1771930828
 GameObject:
   m_ObjectHideFlags: 0
