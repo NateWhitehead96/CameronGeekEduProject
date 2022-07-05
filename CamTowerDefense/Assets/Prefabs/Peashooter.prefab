@@ -100,6 +100,10 @@ MonoBehaviour:
   cost: 50
   health: 3
   tile: {fileID: 0}
+  sprite: {fileID: 0}
+  hurtVersion: {fileID: 21300000, guid: f12caacdf68e4c948bf9a5e6c242bbe0, type: 3}
+  halfHealth: 0
+  hasOtherSprites: 1
 --- !u!114 &8563395051517856000
 MonoBehaviour:
   m_ObjectHideFlags: 0

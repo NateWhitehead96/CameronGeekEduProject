@@ -125,3 +125,7 @@ MonoBehaviour:
   cost: 25
   health: 5
   tile: {fileID: 0}
+  sprite: {fileID: 0}
+  hurtVersion: {fileID: 21300000, guid: 6003a56b8d4855948ab630590a3fdb24, type: 3}
+  halfHealth: 0
+  hasOtherSprites: 1

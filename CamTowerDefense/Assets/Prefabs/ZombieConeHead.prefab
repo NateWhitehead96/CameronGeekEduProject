@@ -148,6 +148,7 @@ MonoBehaviour:
   moveSpeed: 1
   health: 4
   plantWereAttacking: {fileID: 0}
+  deathEffect: {fileID: 5291356855072879763, guid: 171eb1e624bb6ba4d9011ea95bbcfa00, type: 3}
 --- !u!61 &9111358240445811801
 BoxCollider2D:
   m_ObjectHideFlags: 0

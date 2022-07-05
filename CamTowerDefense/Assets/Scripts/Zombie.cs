@@ -8,6 +8,7 @@ public class Zombie : MonoBehaviour
     public int health;
 
     public Building plantWereAttacking; // hold the plant we want to deal damage to
+    public GameObject deathEffect; // the particle effect to play when a zombie dies
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Zombie : MonoBehaviour
         if(health <= 0)
         {
             FindObjectOfType<ZombieSpawner>().UpdateEnemiesRemaining();
+            Instantiate(deathEffect, transform.position, transform.rotation); // spawn the death effect
             Destroy(gameObject);
         }
     }
