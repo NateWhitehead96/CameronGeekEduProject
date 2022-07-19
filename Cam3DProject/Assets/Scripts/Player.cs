@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     float horizontal; // movement variable
     float vertical; // movement variable
+    public bool jumping; // a bool for jumping
+    public bool inputSwitch; // to know if we're controller or keyboard, controller = true and keyboard = false
     // Start is called before the first frame update
     void Start()
     {
@@ -28,24 +30,37 @@ public class Player : MonoBehaviour
         moveDirection = (transform.forward * vertical) + (transform.right * horizontal); // new forward movement direction
         Vector3 force = moveDirection * (moveSpeed * Time.deltaTime); // our force for movement
         transform.position += force; // apply all of that stuff above to our position
-        //if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        //{
-        //    horizontal = 0;
-        //}
+        
 
         // ---- Rotation Stuff ---- //
-        float rightStick = Input.GetAxis("RightStick X"); // now get the right stick left and right input
-        yRotation = rightStick * horizontalSpeed * Time.deltaTime; // hold our new Y axis rotation
-        Vector3 playerRotation = transform.rotation.eulerAngles; // this variable will allow us to apply the rotation to the player
-        playerRotation.y += yRotation; // set the y rotation
-        transform.rotation = Quaternion.Euler(playerRotation); // applies our new rotation
+        if (inputSwitch == true) // if using controller
+        {
+            float rightStick = Input.GetAxis("RightStick X"); // now get the right stick left and right input
+            yRotation = rightStick * horizontalSpeed * Time.deltaTime; // hold our new Y axis rotation
+            Vector3 playerRotation = transform.rotation.eulerAngles; // this variable will allow us to apply the rotation to the player
+            playerRotation.y += yRotation; // set the y rotation
+            transform.rotation = Quaternion.Euler(playerRotation); // applies our new rotation
+        }
+        if(inputSwitch == false) // if using mouse and keyboard
+        {
+            float mouseX = Input.GetAxis("Mouse X"); // get the mouse X axis
+            yRotation = mouseX * horizontalSpeed * Time.deltaTime; // hold our new Y axis rotation
+            Vector3 playerRotation = transform.rotation.eulerAngles; // this variable will allow us to apply the rotation to the player
+            playerRotation.y += yRotation; // set the y rotation
+            transform.rotation = Quaternion.Euler(playerRotation); // applies our new rotation
+        }
 
         // ---- Jumping ---- //
-        float jump = Input.GetAxis("Jump");
-        rb.AddForce(Vector3.up * jumpForce * jump, ForceMode.Impulse); // add force up
-        //if (Input.GetAxis("Jump") > 0) // our jump button has been pressed
-        //{
-        //    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // add force up
-        //}
+        if (jumping == false && Input.GetAxis("Jump") > 0) // only run the jump stuff if we havent jumped yet
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // add force up
+            jumping = true;
+        }
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        jumping = false; // if we collide with anything then we're not jumping. This will be changed in the future
     }
 }
