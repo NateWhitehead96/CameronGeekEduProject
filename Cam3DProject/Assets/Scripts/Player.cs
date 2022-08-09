@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     float vertical; // movement variable
     public bool jumping; // a bool for jumping
     public bool inputSwitch; // to know if we're controller or keyboard, controller = true and keyboard = false
+
+    public int coins;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +64,14 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         jumping = false; // if we collide with anything then we're not jumping. This will be changed in the future
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Coin>()) // when we collide with a coin
+        {
+            coins++; // increase coin amount by 1
+            Destroy(other.gameObject); // destroy the coin
+        }
     }
 }
