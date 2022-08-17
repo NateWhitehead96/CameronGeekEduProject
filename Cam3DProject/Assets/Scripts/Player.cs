@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public bool inputSwitch; // to know if we're controller or keyboard, controller = true and keyboard = false
 
     public int coins;
+    public int health;
+    public int lives;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,15 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         jumping = false; // if we collide with anything then we're not jumping. This will be changed in the future
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            health--;
+        }
+        if (collision.gameObject.CompareTag("Deathplane"))
+        {
+            transform.position = new Vector3(0, 2, 0); // respawn the player back to its original position
+        }
     }
 
     private void OnTriggerEnter(Collider other)

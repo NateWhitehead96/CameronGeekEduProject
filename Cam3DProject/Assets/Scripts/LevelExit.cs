@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
@@ -28,5 +29,13 @@ public class LevelExit : MonoBehaviour
             collider.enabled = true;
         }
         transform.LookAt(player.transform); // make the level exit portal always look at our player
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Player>())
+        {
+            SceneManager.LoadScene("HUBWorld");
+        }
     }
 }
