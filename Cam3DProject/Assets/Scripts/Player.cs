@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     public int coins;
     public int health;
     public int lives;
+
+    public Animator anim; // animation controller
+    public bool running; // to know if the player is moving
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +31,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ---- Animations ---- //
+        anim.SetBool("running", running);
+        anim.SetBool("jumping", jumping);
+
         // ---- Move input stuff ---- //
         horizontal = Input.GetAxis("Horizontal"); // any input that may effect horizontal movement, a/d, left/right arrow, etc
         vertical = Input.GetAxis("Vertical"); // any input that is for vertical movement, W/S, up and down arrow, etc
         moveDirection = (transform.forward * vertical) + (transform.right * horizontal); // new forward movement direction
         Vector3 force = moveDirection * (moveSpeed * Time.deltaTime); // our force for movement
         transform.position += force; // apply all of that stuff above to our position
-        
+        if(horizontal != 0 || vertical != 0) // any input for movement
+        {
+            running = true; // make running true
+        }
+        else
+        {
+            running = false; // make running false
+        }
 
         // ---- Rotation Stuff ---- //
         if (inputSwitch == true) // if using controller
