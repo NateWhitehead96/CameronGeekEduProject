@@ -1,0 +1,510 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1889; Version 2009; 64bit' Language: 'en' Physical Memory: 16317 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity Projects/TeachingProjects/CameronGeekEduProject/Cam3DProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64372
+Successfully changed project path to: D:/Unity Projects/TeachingProjects/CameronGeekEduProject/Cam3DProject
+D:/Unity Projects/TeachingProjects/CameronGeekEduProject/Cam3DProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 26.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.4f1 (becced5a802b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity Projects/TeachingProjects/CameronGeekEduProject/Cam3DProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   30.0.14.7196
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003467 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 28.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.219 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000732 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1470 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.5 MB.
+System memory in use after: 71.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1915.
+Total: 2.532100 ms (FindLiveObjects: 0.372400 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.978200 ms  DeleteObjects: 0.129100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/PlayerModels
+  artifactKey: Guid(27199fddfaab2ee4a9f2ea092be9d8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels using Guid(27199fddfaab2ee4a9f2ea092be9d8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3729cb5a26fab1b982536b0713182eb6') in 0.032186 seconds
+  Import took 0.035547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.217970 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c397be63e8c9734768de0745ae59746') in 0.351536 seconds
+  Import took 0.354955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Jump.fbx
+  artifactKey: Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Jump.fbx using Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57e8cf35325866ebaecca67c7128bc5') in 0.010069 seconds
+  Import took 0.012773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx
+  artifactKey: Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx using Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4661f4e3953a01551e2fc37a98667f0e') in 0.013599 seconds
+  Import took 0.016663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c927d25c04dac5eb224b662a890f5d20') in 0.010604 seconds
+  Import took 0.013594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003243 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx
+  artifactKey: Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx using Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4661f4e3953a01551e2fc37a98667f0e') in 0.005855 seconds
+  Import took 0.028933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.799025 seconds.
+  path: Assets/PlayerModels/Castle Guard 02.fbx
+  artifactKey: Guid(67c9f7c05b6690d45bae570cf7e453bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Castle Guard 02.fbx using Guid(67c9f7c05b6690d45bae570cf7e453bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6c250d5ed1e36544da8f2e5ede5748') in 0.045013 seconds
+  Import took 0.047994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 186.170940 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0619f6ba7e0f78d0499c2d3726be1994') in 0.062235 seconds
+  Import took 0.065415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/PlayerModels/Guard_02__specular.png
+  artifactKey: Guid(224365de8817fa941ade5deb644832c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Guard_02__specular.png using Guid(224365de8817fa941ade5deb644832c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b21297b766c334f14392e56e012822ee') in 0.040169 seconds
+  Import took 0.042409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/PlayerModels/Guard_02__normal.png
+  artifactKey: Guid(1399e04750a1f2e46b68c121231a1522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Guard_02__normal.png using Guid(1399e04750a1f2e46b68c121231a1522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b98d985e7418ef4667d803b182965f') in 0.011307 seconds
+  Import took 0.027556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000659 seconds.
+  path: Assets/PlayerModels/Guard_02__diffuse.png
+  artifactKey: Guid(954752ada8449c647bfdc09385d62fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Guard_02__diffuse.png using Guid(954752ada8449c647bfdc09385d62fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a5e24f540f64fc9503b34a437ab931') in 0.011524 seconds
+  Import took 0.014333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.799688 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01b082380f0ab3c78551452ecf6d2c7c') in 0.039307 seconds
+  Import took 0.042610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/PlayerModels/Guard_02.mat
+  artifactKey: Guid(f0d63d69eb7318746b9600a4121ff428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Guard_02.mat using Guid(f0d63d69eb7318746b9600a4121ff428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a569e9a9b521339d193b441ea3f69685') in 0.026704 seconds
+  Import took 0.030939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01b082380f0ab3c78551452ecf6d2c7c') in 0.021465 seconds
+  Import took 0.024849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 141.626880 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c55757298229521fd8775c4c03c7b476') in 0.029114 seconds
+  Import took 0.032487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 142.372712 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9697855f6074a41435ab373b7d0b8b') in 0.004855 seconds
+  Import took 0.007784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001934 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9697855f6074a41435ab373b7d0b8b') in 0.004481 seconds
+  Import took 0.006996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.904471 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc290c60bded11610a537a9e5c137494') in 0.004797 seconds
+  Import took 0.008211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005246 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc290c60bded11610a537a9e5c137494') in 0.004336 seconds
+  Import took 0.007033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.910412 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07b7ec84f13b18494916ff223e85aeb') in 0.006959 seconds
+  Import took 0.011954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007049 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07b7ec84f13b18494916ff223e85aeb') in 0.004954 seconds
+  Import took 0.008071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.962852 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4951bb47ebd9f260e7b87c531b2a7e3') in 0.004185 seconds
+  Import took 0.006775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006429 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4951bb47ebd9f260e7b87c531b2a7e3') in 0.005936 seconds
+  Import took 0.009668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.805669 seconds.
+  path: Assets/PlayerModels/castle_guard_01.fbx
+  artifactKey: Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01.fbx using Guid(cfc36c3a5da844d4e88600e2df4ac443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf52554c28992addb448ba6358c86a8f') in 0.028950 seconds
+  Import took 0.033161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.559631 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5fc05e3cba1960d2624c44a189aa7d') in 0.007358 seconds
+  Import took 0.012630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003604 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx
+  artifactKey: Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Breathing Idle.fbx using Guid(136d4f40416c4c2419deefde3feb1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5fc05e3cba1960d2624c44a189aa7d') in 0.005333 seconds
+  Import took 0.007913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.718590 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx
+  artifactKey: Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx using Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148a3da66cca61cdfae493d7f17615aa') in 0.006466 seconds
+  Import took 0.009327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008328 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx
+  artifactKey: Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx using Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148a3da66cca61cdfae493d7f17615aa') in 0.007812 seconds
+  Import took 0.011779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.560483 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Jump.fbx
+  artifactKey: Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Jump.fbx using Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37e4e955b23c0948235566bc5b1a934') in 0.005752 seconds
+  Import took 0.009044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006502 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Jump.fbx
+  artifactKey: Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Jump.fbx using Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37e4e955b23c0948235566bc5b1a934') in 0.006746 seconds
+  Import took 0.009771 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000789 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.788 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.3 MB.
+System memory in use after: 87.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1962.
+Total: 2.981800 ms (FindLiveObjects: 0.370500 ms CreateObjectMapping: 0.049100 ms MarkObjects: 2.403400 ms  DeleteObjects: 0.155600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 220.162941 seconds.
+  path: Assets/PlayerModels/PlayerAnimator.controller
+  artifactKey: Guid(dec114b06d3eb7547afb115143cf56ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/PlayerAnimator.controller using Guid(dec114b06d3eb7547afb115143cf56ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f33b3f71d6e16587f01c8d3304db1b65') in 0.023300 seconds
+  Import took 0.028310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 309.035810 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(820eed1726bff4c47882f7b24ad16f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(820eed1726bff4c47882f7b24ad16f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b20067ee8b73b88063c05690e527dae') in 0.014600 seconds
+  Import took 0.017596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001458 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(820eed1726bff4c47882f7b24ad16f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(820eed1726bff4c47882f7b24ad16f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b20067ee8b73b88063c05690e527dae') in 0.002521 seconds
+  Import took 0.004639 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000621 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.730 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1964.
+Total: 1.620500 ms (FindLiveObjects: 0.195300 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.289500 ms  DeleteObjects: 0.099700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.797 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1966.
+Total: 4.205800 ms (FindLiveObjects: 0.932400 ms CreateObjectMapping: 0.122200 ms MarkObjects: 2.976100 ms  DeleteObjects: 0.171400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 567.690607 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx
+  artifactKey: Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Drunk Run Forward.fbx using Guid(dc9d796d4f045f24fbbe83987fe5ac6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f68a2348be0962e33d00c0687e489b6c') in 0.032915 seconds
+  Import took 0.037008 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000711 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.796 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1968.
+Total: 4.003500 ms (FindLiveObjects: 0.844200 ms CreateObjectMapping: 0.069000 ms MarkObjects: 2.948300 ms  DeleteObjects: 0.140000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.013912 seconds.
+  path: Assets/PlayerModels/castle_guard_01@Jump.fbx
+  artifactKey: Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/castle_guard_01@Jump.fbx using Guid(034b5bd5fea9c084d9aef20f3303875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb1305c471b6c6336e52f7926475f784') in 0.026255 seconds
+  Import took 0.029647 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001016 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.753 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1970.
+Total: 1.740500 ms (FindLiveObjects: 0.204800 ms CreateObjectMapping: 0.039900 ms MarkObjects: 1.385800 ms  DeleteObjects: 0.108400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 608.695046 seconds.
+  path: Assets/PlayerModels/Drunk Run Forward.anim
+  artifactKey: Guid(73d2bfa4b0529ce45b48075caaa8711f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerModels/Drunk Run Forward.anim using Guid(73d2bfa4b0529ce45b48075caaa8711f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee423de0632b7698f81adb2825f21d89') in 0.027303 seconds
+  Import took 0.040909 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000746 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.669 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.4 MB.
+System memory in use after: 87.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1972.
+Total: 1.586400 ms (FindLiveObjects: 0.160300 ms CreateObjectMapping: 0.039100 ms MarkObjects: 1.289900 ms  DeleteObjects: 0.096400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
