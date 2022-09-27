@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(0, 2, 0); // respawn the player back to its original position
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -97,6 +98,12 @@ public class Player : MonoBehaviour
         {
             coins++; // increase coin amount by 1
             Destroy(other.gameObject); // destroy the coin
+        }
+        if (other.gameObject.CompareTag("SlimeWeakPoint"))
+        {
+            other.gameObject.GetComponentInParent<SlimeScript>().StartDying(); // when we touch the hit box of the slime
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // to force our player up
+            jumping = true; // set jumping to true
         }
     }
 }
