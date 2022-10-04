@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // add force up
             jumping = true;
+            SoundEffectManager.instance.jumpSound.Play(); // play the jump sound
         }
         
     }
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             health--;
+            SoundEffectManager.instance.playerHurt.Play(); // play the player hurt sound
         }
         if (collision.gameObject.CompareTag("Deathplane"))
         {
@@ -98,6 +100,7 @@ public class Player : MonoBehaviour
         {
             coins++; // increase coin amount by 1
             Destroy(other.gameObject); // destroy the coin
+            SoundEffectManager.instance.coinSound.Play(); // play the coin sound
         }
         if (other.gameObject.CompareTag("SlimeWeakPoint"))
         {

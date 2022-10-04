@@ -63,6 +63,7 @@ public class SlimeScript : MonoBehaviour
 
     IEnumerator Dying()
     {
+        SoundEffectManager.instance.enemyHurt.Play(); // play the enemy hurt sound
         GetComponent<SphereCollider>().enabled = false; // disable colliders that hurt the player
         anim.SetBool("dying", true); // set the animation to dying
         moving = false;
