@@ -7349,6 +7349,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1931096616}
+    - target: {fileID: 5036525191873663162, guid: 1ecf0430838d66b49b81b73e28d7ac61, type: 3}
+      propertyPath: levelBeat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5036525191873663165, guid: 1ecf0430838d66b49b81b73e28d7ac61, type: 3}
       propertyPath: m_Name
       value: LevelExit

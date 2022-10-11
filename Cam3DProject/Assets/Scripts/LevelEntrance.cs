@@ -7,11 +7,14 @@ public class LevelEntrance : MonoBehaviour
 {
     [SerializeField] public Transform player; // the portal looks at our player
     [SerializeField] public int levelToLoad; // we can know what level to load up
-
+    public int unlock; // what the levels beaten needs to be to show this portal
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(GameManager.instance.levelsBeaten < unlock) // if we havent beaten up to this level, then hide it
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

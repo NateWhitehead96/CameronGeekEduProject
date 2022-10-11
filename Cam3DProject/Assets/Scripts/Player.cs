@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
         // ---- Animations ---- //
         anim.SetBool("running", running);
         anim.SetBool("jumping", jumping);
+        anim.SetFloat("strafe", horizontal); // make us strafe depending on our horizontal movement
 
         // ---- Move input stuff ---- //
         horizontal = Input.GetAxis("Horizontal"); // any input that may effect horizontal movement, a/d, left/right arrow, etc
@@ -85,6 +86,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             health--;
+            if (health <= 0) // when we hit 0 health
+            {
+                anim.SetBool("dying", true); // play dying animation
+            }
             SoundEffectManager.instance.playerHurt.Play(); // play the player hurt sound
         }
         if (collision.gameObject.CompareTag("Deathplane"))

@@ -10,6 +10,7 @@ public class LevelExit : MonoBehaviour
     public GameObject particleSystem; // turn on and off this particle system
     public MeshRenderer mesh; // body of the gameobject
     public SphereCollider collider;
+    public int levelBeat; // to unlock the next level
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,11 @@ public class LevelExit : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>())
         {
+            if(GameManager.instance.levelsBeaten < levelBeat)
+            {
+                GameManager.instance.levelsBeaten = levelBeat; // if we haven't beaten this level, set its value to levels beaten
+                GameManager.instance.SaveGame(); // save data
+            }
             SceneManager.LoadScene("HUBWorld");
         }
     }
